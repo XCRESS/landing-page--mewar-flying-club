@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="relative overflow-hidden min-h-screen bg-white">
       {/* University affiliation banner */}
-      <div className={`bg-[${brandColors.primary}] text-white px-4 py-1 text-center text-sm md:text-base`}>
+      <div className="bg-sky-700 text-white px-4 py-1 text-center text-sm md:text-base" style={{ backgroundColor: brandColors.primary }}>
         An official program of Mewar University - Expanding Horizons in Aviation Education
       </div>
 
@@ -28,9 +28,12 @@ function App() {
           style={{ y: backgroundY }}
         >
           {/* Using background images with fallback colors */}
-          <div className={`absolute top-1/4 left-1/3 w-64 h-64 bg-[${brandColors.light}]/30 rounded-full bg-contain bg-no-repeat opacity-30`} style={{ backgroundImage: `url('${getImageWithFallback('/images/engine-part.png')}')` }}></div>
-          <div className={`absolute top-2/3 right-1/4 w-96 h-96 bg-[${brandColors.light}]/20 rounded-full bg-contain bg-no-repeat rotate-12 opacity-20`} style={{ backgroundImage: `url('${getImageWithFallback('/images/wing-part.png')}')` }}></div>
-          <div className={`absolute bottom-1/4 left-1/5 w-52 h-52 bg-[${brandColors.light}]/25 rounded-full bg-contain bg-no-repeat -rotate-6 opacity-25`} style={{ backgroundImage: `url('${getImageWithFallback('/images/blueprint.png')}')` }}></div>
+          <div className="absolute top-1/4 left-1/3 w-64 h-64 bg-sky-100/30 rounded-full bg-contain bg-no-repeat opacity-30" 
+               style={{ backgroundImage: `url('${getImageWithFallback('/images/engine-part.png')}')` }}></div>
+          <div className="absolute top-2/3 right-1/4 w-96 h-96 bg-sky-100/20 rounded-full bg-contain bg-no-repeat rotate-12 opacity-20" 
+               style={{ backgroundImage: `url('${getImageWithFallback('/images/wing-part.png')}')` }}></div>
+          <div className="absolute bottom-1/4 left-1/5 w-52 h-52 bg-sky-100/25 rounded-full bg-contain bg-no-repeat -rotate-6 opacity-25" 
+               style={{ backgroundImage: `url('${getImageWithFallback('/images/blueprint.png')}')` }}></div>
         </motion.div>
       </div>
 
@@ -120,7 +123,7 @@ function App() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.3 }}
               >
-                <h2 className="text-2xl md:text-3xl font-bold text-[#004080] mb-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-sky-800 mb-4" style={{ color: '#004080' }}>
                   Mewar University's First Aviation Program
                 </h2>
                 <p className="text-gray-700 text-lg">
