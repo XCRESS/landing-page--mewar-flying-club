@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+/* Light theme appropriate for educational institution */
+@layer base {
+  body {
+    @apply bg-white text-slate-700;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+/* Custom university branded colors */
+:root {
+  --color-primary: #004080;   /* Mewar University Blue */
+  --color-secondary: #e63946; /* Accent red */
+  --color-tertiary: #f1faee;  /* Light background */
+  --color-text-primary: #1d3557; /* Dark blue text */
+  --color-text-secondary: #457b9d; /* Medium blue text */
+}
