@@ -1,0 +1,26 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[dev]
+  command = "npm run dev"
+  port = 3000
+  targetPort = 5173
+  publish = "dist"
+  framework = "vite"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true 
+
+[[headers]]
+  for = "/assets/*.js"
+  [headers.values]
+    Content-Type = "application/javascript"
+
+[[headers]]
+  for = "/assets/*.css"
+  [headers.values]
+    Content-Type = "text/css" 
